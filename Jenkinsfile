@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    environment {
+        DATABASE_URL = credentials('rds_url')
+    }
+
     stages {
 
         stage('Checkout') {
